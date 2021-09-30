@@ -6,10 +6,10 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        Integer[] data = {1, 2, 3, 4, 5, 6, 4, 8, 9, 10, 3, 12, 5, 14, 4};
+        String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
         
         Histogram histo = new Histogram(data);
-        Map<Integer, Integer> histogr = histo.getHistogram();
+        Map<String, Integer> histogr = histo.getHistogram();
 
         /*for (int i = 0; i < data.length; i++) {
             if (histogram.containsKey(data[i])) {
@@ -25,7 +25,7 @@ public class Kata2 {
             histogram.put(key, histogram.containsKey(key) ? histogram.get(key) +1 : 1);
             
         }*/
-        for (Integer key : histogr.keySet()) {
+        for (String key : histogr.keySet()) {
 
                 System.out.println(key + " ==> " + histogr.get(key));
             }
